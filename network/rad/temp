@@ -1,0 +1,63 @@
+# import six
+# import pyrad.tools
+# import socket
+# MAX_BYTES = 65535
+# IP = '0.0.0.0'
+# PORT = 1700
+#
+# class podPacket:
+#
+#     def send_POD_packet(self):
+#         sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+#         # sock.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
+#
+#         sock.sendto(data, (IP, PORT))
+#         print('Listening at {}'.format(sock.getsockname()))
+#
+#     pass
+#
+#
+#
+
+#==========================
+
+
+
+# def encode_attrs(code, datalst):
+#     result=""
+#     #for (code, datalst) in self.items():
+#     for data in datalst:
+#         result += encode_attr(code, data)
+
+#     return result
+
+# def encode_attr(key, value):
+#     if type(key)==types.TupleType:
+#         value = struct.pack("!L", key[0]) + encode_attr(key[1], value)
+#         key=26 # ATTRIBUTE  Vendor-Specific     26  octets
+
+#     return struct.pack("!BB", key, (len(value)+2))+value
+
+
+# def encode_key_values(key, values):
+#     if type(key)!=types.StringType:
+#             return (key, values)
+
+#     attr=self.dict.attributes[key]
+
+#     if attr.vendor:
+#             key=(self.dict.vendors.GetForward(attr.vendor), attr.code)
+#     else:
+#             key=attr.code
+
+#     return (key,
+#             map(lambda v,a=attr,s=self: s.encode_value(a,v), values))
+
+# def encode_value(attr, value):
+#     if attr.values.HasForward(value):
+#         return attr.values.GetForward(value)
+#     else:
+#         return EncodeAttr(attr.type, value)
+
+
+
